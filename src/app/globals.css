@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f8f9fb;
+  --foreground: #111827;
+  --card-bg: #ffffff;
+  --accent: #ff4d4d;
+  --accent-hover: #e03d3d;
+  --slate-dark: #0f172a;
+  --slate-light: #f1f5f9;
+  --border-color: rgba(17, 24, 39, 0.06);
+}
+
+.dark {
+  --background: #090d16;
+  --foreground: #f1f5f9;
+  --card-bg: #111827;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --slate-light: #1e293b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-slate-dark: var(--slate-dark);
+  --color-slate-light: var(--slate-light);
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Base Body Styling */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+  transition: background-color 0.5s ease;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Premium Card Shadow and Hover Effects */
+.premium-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px -2px rgba(17, 24, 39, 0.02), 0 2px 6px -1px rgba(17, 24, 39, 0.02);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(17, 24, 39, 0.05), 0 10px 10px -5px rgba(17, 24, 39, 0.02);
+  border-color: rgba(255, 77, 77, 0.25);
+}
+
+.dark .premium-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Hero Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Text Accent Highlight */
+.accent-text-glow {
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(255, 77, 77, 0.15);
+}
+
+/* Terminal Glassmorphism */
+.terminal-card {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.3);
+}
+
+
