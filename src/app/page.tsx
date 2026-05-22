@@ -52,7 +52,7 @@ export default function Home() {
 
   // Interactive Terminal Contact states
   const [chatLog, setChatLog] = useState([
-    { sender: "Sistem", text: "Koneksi terjalin secara aman dengan server MY PROFILE." },
+    { sender: "Sistem", text: "Koneksi terjalin secara aman." },
     { sender: "Sistem", text: "Selamat datang di terminal interaktif Akbar Husaini. Hubungi saya di sini!" }
   ]);
   const [chatName, setChatName] = useState("");
@@ -145,8 +145,8 @@ export default function Home() {
         }`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 group">
-            <span className="font-black text-xl tracking-tighter text-slate-900 dark:text-white group-hover:text-accent transition-colors">
-              MY PROFILE<span className="text-accent animate-pulse">.</span>
+            <span className="font-bold text-xl tracking-tight text-slate-900 dark:text-white group-hover:text-accent transition-colors">
+              my profile
             </span>
           </a>
 
@@ -713,8 +713,8 @@ export default function Home() {
       <footer className="w-full bg-background border-t border-slate-200/50 dark:border-slate-850 py-10 px-6 transition-colors duration-500">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center sm:items-start gap-1">
-            <span className="font-extrabold text-base tracking-tight text-slate-900 dark:text-white">
-              MY PROFILE<span className="text-accent">.</span>
+            <span className="font-bold text-base text-slate-900 dark:text-white">
+              my profile
             </span>
             <p className="text-[10px] text-slate-400 dark:text-slate-500 font-mono uppercase tracking-wider">
               ENGINEERED FOR IMPACT
